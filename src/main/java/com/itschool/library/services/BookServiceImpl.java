@@ -3,9 +3,9 @@ package com.itschool.library.services;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itschool.library.repositories.BookRepository;
 import lombok.extern.slf4j.Slf4j;
-import models.dtos.RequestBookDTO;
-import models.dtos.ResponseBookDTO;
-import models.entities.Book;
+import com.itschool.library.models.dtos.RequestBookDTO;
+import com.itschool.library.models.dtos.ResponseBookDTO;
+import com.itschool.library.models.entities.Book;
 import org.springframework.stereotype.Service;
 
 @Slf4j

@@ -1,7 +1,7 @@
 package com.itschool.library.services;
 
-import models.dtos.RequestBookDTO;
-import models.dtos.ResponseBookDTO;
+import com.itschool.library.models.dtos.RequestBookDTO;
+import com.itschool.library.models.dtos.ResponseBookDTO;
 
 public interface BookService {
     ResponseBookDTO createBook(RequestBookDTO requestBookDTO);

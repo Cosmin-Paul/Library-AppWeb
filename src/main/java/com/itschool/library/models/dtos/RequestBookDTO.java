@@ -1,4 +1,4 @@
-package models.dtos;
+package com.itschool.library.models.dtos;
 
 import lombok.Data;
 
