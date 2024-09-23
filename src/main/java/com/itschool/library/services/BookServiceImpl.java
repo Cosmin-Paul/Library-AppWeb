@@ -3,9 +3,9 @@ package com.itschool.library.services;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itschool.library.repositories.BookRepository;
 import lombok.extern.slf4j.Slf4j;
-import models.dtos.BookDTO;
+import models.dtos.RequestBookDTO;
+import models.dtos.ResponseBookDTO;
 import models.entities.Book;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -15,18 +15,17 @@ public class BookServiceImpl implements BookService {
     private final ObjectMapper objectMapper;
     private final BookRepository bookRepository;
 
-
     public BookServiceImpl(ObjectMapper objectMapper, BookRepository bookRepository) {
         this.objectMapper = objectMapper;
         this.bookRepository = bookRepository;
     }
 
     @Override
-    public BookDTO createBook(BookDTO bookDTO) {
-        Book bookEntity = objectMapper.convertValue(bookDTO, Book.class);
+    public ResponseBookDTO createBook(RequestBookDTO requestBookDTO) {
+        Book bookEntity = objectMapper.convertValue(requestBookDTO, Book.class);
         Book bookEntityResponse = bookRepository.save(bookEntity);
         log.info("Book with id {} was saved", bookEntityResponse.getId());
 
-        return objectMapper.convertValue(bookEntityResponse, BookDTO.class);
+        return objectMapper.convertValue(bookEntityResponse, ResponseBookDTO.class);
     }
 }

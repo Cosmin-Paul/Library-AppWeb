@@ -3,17 +3,12 @@ package models.dtos;
 import lombok.Data;
 
 @Data
-public class BookDTO {
-
-    private Long id;
+public class RequestBookDTO {
 
     private String title;
-
     private String author;
-
     private String isbn;
-
     private String genre;
 
-    private int copiesAvailable;
+//    private int copiesAvailable;
 }

@@ -1,7 +1,8 @@
 package com.itschool.library.controlers;
 
 import com.itschool.library.services.BookService;
-import models.dtos.BookDTO;
+import models.dtos.RequestBookDTO;
+import models.dtos.ResponseBookDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +18,7 @@ public class BookController {
     }
 
     @PostMapping("api/books")
-    public ResponseEntity<BookDTO> createook(@RequestBody BookDTO bookDTO) {
-        return ResponseEntity.ok(bookService.createBook(bookDTO));
+    public ResponseEntity<ResponseBookDTO> createBook(@RequestBody RequestBookDTO requestBookDTO) {
+        return ResponseEntity.ok(bookService.createBook(requestBookDTO));
     }
 }

@@ -26,4 +26,7 @@ public class Book {
 
     @Column(name = "copies_available")
     private int copiesAvailable;
+
+    //    @Column(name = "copies_available")
+//    private int copiesAvailable;
 }
