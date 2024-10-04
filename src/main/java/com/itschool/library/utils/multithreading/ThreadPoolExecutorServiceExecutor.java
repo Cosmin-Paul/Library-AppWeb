@@ -1,4 +1,4 @@
-package com.itschool.library.utils.multitreading;
+package com.itschool.library.utils.multithreading;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;

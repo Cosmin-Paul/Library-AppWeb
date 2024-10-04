@@ -1,4 +1,4 @@
-package com.itschool.library.utils.multitreading;
+package com.itschool.library.utils.multithreading;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
